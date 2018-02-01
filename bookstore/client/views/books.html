@@ -1,0 +1,23 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class="container">  
+    <div class="panel panel-default" ng-init="getBooks()">
+        <div class="panel-heading"> Latest Books </div>
+        <div class="panel-body">
+           <div class="row">
+            <div ng-repeat="book in books">
+                <div class="col-md-6">
+                    <div class="col-md-6">
+                            <h4>{{book.title}}</h4>
+                            <p>{{book.description}}</p>
+                            <a class="btn btn-primary" href="#!/books/details/{{book._id}}">View details</a>
+                    </div>
+                    <div class="col-md-6">
+                            <img class="thumbnail" src="{{book.image_url}}">
+                    </div>
+                </div>
+        </div>
+    </div>
+  </div>
+        </div>
+    </div>
